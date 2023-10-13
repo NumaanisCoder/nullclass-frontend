@@ -1,0 +1,95 @@
+.LoginFragment{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+label{
+    display: block;
+}
+
+.form-group{
+    margin: 10px 0px;
+    width: 50vh;
+  
+}
+.form-group input{
+    outline-color: rgb(25, 32, 169);
+    width: 90%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.login-div{
+    padding: 6px;
+    display: flex;
+    height: 70vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid blue;
+    border-left: 0px;
+}
+
+.login-btn-div button{
+    background-color: rgb(25, 32, 169);
+    color: white;
+    font-weight: 500;
+    padding: 7px;
+    border: none;
+   opacity: .85;
+}
+
+.login-btn-div button:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.login-btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.passtypebtn{
+    background-color: rgb(47, 57, 235);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 15%;
+    height: 30px;
+}
+
+
+
+
+
+
+
+@media (max-width:480px) {
+ .login-div{
+    border: 1px solid black;
+    justify-content: center;
+ }
+ .circle{
+    margin-bottom: 15px;
+ }
+ .form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 15px;
+    padding-left: 80px;
+ }
+ 
+ label{
+    display: inline;
+ }
+}
