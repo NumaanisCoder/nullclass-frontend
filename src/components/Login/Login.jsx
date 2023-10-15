@@ -11,6 +11,8 @@ import PasswordBTN from "../PasswordBTN/passwordbtn";
 const Login = () => {
   const token = Cookies.get("token");
   const navigate = useNavigate();
+  const expirationTime = new Date();
+  const cookieExpire = expirationTime.getHours() + 24*7;
   const [BTN, setBTN] = useState("Show")
   const [cookie, setcookie,removecookie] = useCookies();
   const [FormError, setFormError] = useState({emailerror:"",passworderror:""});
@@ -41,9 +43,10 @@ const Login = () => {
           try{
           const res = await axios.post('http://localhost:5500/api/v1/login', loginFormData,{
             headers: {
-              'Content-Type': 'multipart/form-data' // Ensure the correct content type
+              'Content-Type': 'multipart/form-data' 
             }}); 
-            setcookie("token",res.data.token);
+            setcookie("token",res.data.token,{expires: cookieExpire});
+            console.log(cookieExpire);
             if(res.data.success){
               navigate("/myaccount");
             }
